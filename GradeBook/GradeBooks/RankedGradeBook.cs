@@ -1,10 +1,12 @@
-﻿using System;
+﻿using GradeBook.Enums;
+using System;
 
 namespace GradeBook.GradeBooks
 {
-    class RankedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) : base(name)
+        public new GradeBookType Type;
+        public RankedGradeBook(string name, bool isWeighted) : base(name, isWeighted)
         {
             Type = Enums.GradeBookType.Ranked; 
         }
